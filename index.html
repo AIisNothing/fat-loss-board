@@ -40,6 +40,15 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .node.now .flag i{color:var(--accent);} .node.now .pole{background:var(--accent);} .node.now .nl{color:var(--accent-d);font-weight:700;}
 .node.start .flag{background:#EEF0EA;border-color:#D6DBD2;color:var(--t2);} .node.start .flag i{color:var(--t3);}
 .node.start .pole{background:#CCD2C9;} .node.start .nl{color:var(--t3);}
+/* 首尾节点贴边对齐，避免旗子/文字飘到卡片外 */
+.node.start .flag,.node.start .nl{transform:translateX(0);left:-2px;}
+.node.end .flag,.node.end .nl{transform:translateX(-100%);left:2px;}
+@media(max-width:600px){
+ .msbar{margin:52px 16px 4px;}
+ .node .flag{min-width:30px;height:23px;padding:0 7px;font-size:13px;}
+ .node .nl{font-size:10px;}
+ .here b{font-size:10px;}
+}
 .tip-t{font-size:14px;font-weight:650;color:var(--ink);margin-bottom:5px;}
 .tip-b{font-size:13.5px;line-height:1.72;color:var(--t2);}
 .speed{margin-top:11px;font-size:13px;line-height:1.65;color:var(--t2);padding-left:12px;border-left:2px solid var(--soft);}
@@ -133,11 +142,11 @@ table.cal td.td{background:var(--soft);box-shadow:inset 0 0 0 1.5px var(--accent
 .foot{text-align:center;color:var(--t3);font-size:10px;letter-spacing:.05em;margin-top:22px;}
 </style></head><body><div class="wrap">
 
-<div class="head"><div class="upd">更新至 2026-06-09 19:16</div><h1>涛涛今天减肥成功了没？</h1><div class="answer">还没有～</div></div>
+<div class="head"><div class="upd">更新至 2026-06-09 19:20</div><h1>涛涛今天减肥成功了没？</h1><div class="answer">还没有～</div></div>
 
 <div class="card span2">
   <div class="mt">里程碑 · 三个目标</div>
-  <div class='msbar'><div class='track2'><div class='fill2' style='width:35.5%'></div><div class='here' style='left:35.5%'><b>当前 61.5</b></div><div class='node start' style='left:0%'><div class='flag'>65<i>kg</i></div><div class='pole'></div><div class='nl'>起点</div></div><div class='node now' style='left:50.0%'><div class='flag'>60<i>kg</i></div><div class='pole'></div><div class='nl'>第一目标</div></div><div class='node ' style='left:70.0%'><div class='flag'>58<i>kg</i></div><div class='pole'></div><div class='nl'>第二目标</div></div><div class='node ' style='left:100.0%'><div class='flag'>55<i>kg</i></div><div class='pole'></div><div class='nl'>第三目标</div></div></div></div>
+  <div class='msbar'><div class='track2'><div class='fill2' style='width:35.5%'></div><div class='here' style='left:35.5%'><b>当前 61.5</b></div><div class='node start' style='left:0%'><div class='flag'>65<i>kg</i></div><div class='pole'></div><div class='nl'>起点</div></div><div class='node now' style='left:50.0%'><div class='flag'>60<i>kg</i></div><div class='pole'></div><div class='nl'>第一目标</div></div><div class='node ' style='left:70.0%'><div class='flag'>58<i>kg</i></div><div class='pole'></div><div class='nl'>第二目标</div></div><div class='node end' style='left:100.0%'><div class='flag'>55<i>kg</i></div><div class='pole'></div><div class='nl'>第三目标</div></div></div></div>
 </div>
 
 <div class="card span2">
